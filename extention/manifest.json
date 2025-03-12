@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "constring",
+    "version": "1.0",
+    "description": "loginner",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.instagram.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
